@@ -3,7 +3,7 @@ import React from 'react';
 import { faker } from "@faker-js/faker";
 import RestartButton from "./Components/RestartButton";
 import GenerateWords from "./Components/GeneratedWords"
-
+import R
 
 const words = faker.random.words(10);
 const App = () =>{
