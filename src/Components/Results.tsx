@@ -26,20 +26,14 @@ const Results = ({
         <motion.ul
             initial={initial}
             animate={animate}
-            className={`flex flex-col items-center text primary-400 space-y-3 ${className}}`}
+            className={`pt-10 relative flex flex-row justify-center text-col-400 gap-6 ${className}}`}
         >
-            <motion.li
-                initial={initial}
-                animate={animate}
-                transition={{ duration: 0.3 }}
-                className="text-xl font-semibold"
-            >
-                Results
-            </motion.li>
+          
             <motion.li
                 initial={initial}
                 animate={animate}
                 transition={{ duration: 0.3, delay: 0.5 }}
+                className="text-xl font-light"
             >
                 Accuracy: {formatPercentage(accuracyPercentage)}
             </motion.li>
@@ -48,6 +42,7 @@ const Results = ({
             initial={initial}
             animate={animate}
             transition={{duration:0.3, delay:1.4}}
+            className="text-xl font-light"
             >
                 Typed: {total}
             </motion.li>

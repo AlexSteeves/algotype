@@ -1,9 +1,9 @@
 import React from "react";
 import GeneratedWords from "./Components/GeneratedWords";
-import RestartButton from "./Components/RestartButton";
-import TimePicker from "./Components/TimePicker";
+import Restart from "./Components/Restart";
+
 import Results from "./Components/Results";
-import UserTypings from "./Components/UserTypings";
+import TypedWords from "./Components/TypedWords";
 import useEngine from "./Hooks/useEngine";
 import { calculateAccuracyPercentage } from "./utils/helpers";
 
@@ -13,18 +13,18 @@ const App = () => {
 
   return (
     <>
-      <TimePicker/>
+      
       <CountdownTimer timeLeft={timeLeft} />
-      <WordsContainer>
+      <TextContainer>
         <GeneratedWords key={words} words={words} />
 
-        <UserTypings
+        <TypedWords
           className="absolute inset-0"
           words={words}
           userInput={typed}
         />
-      </WordsContainer>
-      <RestartButton
+      </TextContainer>
+      <Restart
         className={"mx-auto mt-10 text-col-200"}
         onRestart={restart}
       />
@@ -39,7 +39,7 @@ const App = () => {
   );
 };
 
-const WordsContainer = ({ children }: { children: React.ReactNode }) => {
+const TextContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className = "flex justify-center items-center ">
       <div className="relative text-3xl max-w-[80%] leading-relaxed break-all mt-3">
