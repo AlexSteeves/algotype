@@ -10,7 +10,13 @@ module.exports = {
     extend: {
       colors:{
         primary: colors.yellow,
+        col: {
+          100: '#182741',
+          200: '#e2e8f0',
+        }
+        
       },
+      
       
     },
   },
